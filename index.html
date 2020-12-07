@@ -152,19 +152,19 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-第一话" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-ftp服务器搭建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/12/06/%E7%AC%AC%E4%B8%80%E8%AF%9D/">第一话之 FTP服务</a>
+      <a class="article-title" href="/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/">FTP服务搭建</a>
     </h1>
   
 
         
-        <a href="/2020/12/06/%E7%AC%AC%E4%B8%80%E8%AF%9D/" class="archive-article-date">
+        <a href="/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/" class="archive-article-date">
   	<time datetime="2020-12-06T06:44:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-06</time>
 </a>
         
@@ -176,19 +176,19 @@
 <p><em>内容仅供参考交流</em></p>
 <h2 id="服务器端"><a href="#服务器端" class="headerlink" title="服务器端"></a>服务器端</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#使用 rpm -q vsftpd 查看是否安装vsftpd软件包(如果未安装则进行安装)</span><br></pre></td></tr></table></figure>
 
-<p><img src="C:\Users\lenovo\blogs\source_posts\img\查看安装包.png" alt="查看命令"></p>
+<p><img src="/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/Users\lenovo\blogs\source_posts\img\查看安装包.png" alt="查看命令"></p>
 <hr>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#使用 service vsftpd start 命令启动vsftpd服务</span><br></pre></td></tr></table></figure>
 
-<p><img src="C:\Users\lenovo\blogs\source_posts\img\启动服务.png" alt="启动服务"></p>
+<p><img src="/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/Users\lenovo\blogs\source_posts\img\启动服务.png" alt="启动服务"></p>
 <hr>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#查看vsftpd的主配置文件；cd /etc/vftpd ; </span><br><span class="line">#找到vsftpd.conf ;</span><br><span class="line">#使用vim vsftpd.conf 进行查看；</span><br></pre></td></tr></table></figure>
 
-<p><img src="C:\Users\lenovo\Pictures\试试.png" alt="找到配置文件"></p>
+<p><img src="/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/Users\lenovo\Pictures\试试.png" alt="找到配置文件"></p>
 <hr>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#按 i或任意键 进入插入模式 ；</span><br><span class="line">#修改anonymous_enable的参数值  &gt;&gt;&gt;  anonymous_enable=YES ;</span><br><span class="line">#修改local_enable的参数值  &gt;&gt;&gt;   local_enable=YES ;</span><br><span class="line">#修改write_enable的参数值  &gt;&gt;&gt;   write_enable=YES ;</span><br><span class="line"># :wq 保存退出 ;</span><br></pre></td></tr></table></figure>
 
-<p><img src="C:\Users\lenovo\Pictures\文件配置.png" alt="配置文件"></p>
+<p><img src="/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/Users\lenovo\Pictures\文件配置.png" alt="配置文件"></p>
 <hr>
 <hr>
 <h2 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#在客户端测试匿名用户FTP的下载和上传操作</span><br></pre></td></tr></table></figure>
@@ -196,19 +196,22 @@
 <hr>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#使用 ftp ip-ddress 命令；ip-address是指器端的ip地址；</span><br><span class="line">#默认用户名：ftp</span><br><span class="line">#默认密码：ftp</span><br></pre></td></tr></table></figure>
 
-<p><img src="C:\Users\lenovo\Pictures\下载.png" alt="下载"></p>
+
+
 <hr>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#使用 cd pub 切换到pub目录 ；</span><br><span class="line">#使用 ls 查看目录中的文件 ；</span><br><span class="line">#下载命令 mget 空格后跟文件名 ；</span><br><span class="line">#遇到 “ ？”提示输入 y 可继续操作 ；</span><br></pre></td></tr></table></figure>
 
-<p><img src="C:\Users\lenovo\Pictures\下载命令.png"></p>
+<p><img src="/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/Users\lenovo\Pictures\下载命令.png"></p>
 <hr>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#上传命令 put 空格后跟文件名 ；</span><br></pre></td></tr></table></figure>
 
-<p><img src="" alt="上传"><img src="C:\Users\lenovo\Pictures\上传.png" alt="上传"></p>
+<p><img src alt="上传"><img src="/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/Users\lenovo\Pictures\上传.png" alt="上传"></p>
 <hr>
 <hr>
 <p><strong><em>测试</em></strong></p>
 <p>联系方式：QQ:==<em>2501749431</em>==</p>
+<hr>
+<hr>
 
       
 
@@ -221,7 +224,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/12/06/%E7%AC%AC%E4%B8%80%E8%AF%9D/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/">展开全文 >></a>
         </p>
       
 
