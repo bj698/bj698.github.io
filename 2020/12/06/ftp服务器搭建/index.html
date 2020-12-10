@@ -27,17 +27,18 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="以下内容主要为个人使用Markdown进行测试 内容仅供参考交流 服务器端1#使用 rpm -q vsftpd 查看是否安装vsftpd软件包(如果未安装则进行安装)    1#使用 service vsftpd start 命令启动vsftpd服务    123#查看vsftpd的主配置文件；cd &#x2F;etc&#x2F;vftpd ; #找到vsftpd.conf ;#使用vim vsftpd.conf 进">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/Users/lenovo/blogs/source_posts/img/查看安装包.png">
-<meta property="og:image" content="http://example.com/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/Users/lenovo/blogs/source_posts/img/启动服务.png">
-<meta property="og:image" content="http://example.com/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/Users/lenovo/Pictures/试试.png">
-<meta property="og:image" content="http://example.com/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/Users/lenovo/Pictures/文件配置.png">
-<meta property="og:image" content="http://example.com/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/Users/lenovo/Pictures/下载命令.png">
-<meta property="og:image" content="http://example.com/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/Users/lenovo/Pictures/上传.png">
+<meta property="og:image" content="http://example.com/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/blogs/source_posts/ftp服务器搭建/查看安装包.png">
+<meta property="og:image" content="http://example.com/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/blogs/source_posts/ftp服务器搭建/启动服务.png">
+<meta property="og:image" content="http://example.com/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/blogs/source_posts/ftp服务器搭建/试试.png">
+<meta property="og:image" content="http://example.com/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/blogs/source_posts/ftp服务器搭建/文件配置.png">
+<meta property="og:image" content="http://example.com/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/blogs/source_posts/ftp服务器搭建/下载.png">
+<meta property="og:image" content="http://example.com/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/blogs/source_posts/ftp服务器搭建/下载命令.png">
+<meta property="og:image" content="http://example.com/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/blogs/source_posts/ftp服务器搭建/上传.png">
 <meta property="article:published_time" content="2020-12-06T06:44:02.000Z">
-<meta property="article:modified_time" content="2020-12-07T04:40:04.835Z">
+<meta property="article:modified_time" content="2020-12-10T13:43:06.018Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/Users/lenovo/blogs/source_posts/img/查看安装包.png">
+<meta name="twitter:image" content="http://example.com/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/blogs/source_posts/ftp服务器搭建/查看安装包.png">
 
 <link rel="canonical" href="http://example.com/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/">
 
@@ -197,7 +198,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-12-07 12:40:04" itemprop="dateModified" datetime="2020-12-07T12:40:04+08:00">2020-12-07</time>
+                <time title="Modified: 2020-12-10 21:43:06" itemprop="dateModified" datetime="2020-12-10T21:43:06+08:00">2020-12-10</time>
               </span>
 
           
@@ -215,19 +216,19 @@
 <p><em>内容仅供参考交流</em></p>
 <h2 id="服务器端"><a href="#服务器端" class="headerlink" title="服务器端"></a>服务器端</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#使用 rpm -q vsftpd 查看是否安装vsftpd软件包(如果未安装则进行安装)</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/Users\lenovo\blogs\source_posts\img\查看安装包.png" alt="查看命令"></p>
+<p><img src="/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/blogs\source_posts\ftp服务器搭建\查看安装包.png" alt="查看命令"></p>
 <hr>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#使用 service vsftpd start 命令启动vsftpd服务</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/Users\lenovo\blogs\source_posts\img\启动服务.png" alt="启动服务"></p>
+<p><img src="/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/blogs\source_posts\ftp服务器搭建\启动服务.png" alt="启动服务"></p>
 <hr>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#查看vsftpd的主配置文件；cd /etc/vftpd ; </span><br><span class="line">#找到vsftpd.conf ;</span><br><span class="line">#使用vim vsftpd.conf 进行查看；</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/Users\lenovo\Pictures\试试.png" alt="找到配置文件"></p>
+<p><img src="/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/blogs\source_posts\ftp服务器搭建\试试.png" alt="找到配置文件"></p>
 <hr>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#按 i或任意键 进入插入模式 ；</span><br><span class="line">#修改anonymous_enable的参数值  &gt;&gt;&gt;  anonymous_enable=YES ;</span><br><span class="line">#修改local_enable的参数值  &gt;&gt;&gt;   local_enable=YES ;</span><br><span class="line">#修改write_enable的参数值  &gt;&gt;&gt;   write_enable=YES ;</span><br><span class="line"># :wq 保存退出 ;</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/Users\lenovo\Pictures\文件配置.png" alt="配置文件"></p>
+<p><img src="/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/blogs\source_posts\ftp服务器搭建\文件配置.png" alt="配置文件"></p>
 <hr>
 <hr>
 <h2 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#在客户端测试匿名用户FTP的下载和上传操作</span><br></pre></td></tr></table></figure>
@@ -235,20 +236,19 @@
 <hr>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#使用 ftp ip-ddress 命令；ip-address是指器端的ip地址；</span><br><span class="line">#默认用户名：ftp</span><br><span class="line">#默认密码：ftp</span><br></pre></td></tr></table></figure>
 
-
-
+<p><img src="/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/blogs\source_posts\ftp服务器搭建\下载.png"></p>
 <hr>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#使用 cd pub 切换到pub目录 ；</span><br><span class="line">#使用 ls 查看目录中的文件 ；</span><br><span class="line">#下载命令 mget 空格后跟文件名 ；</span><br><span class="line">#遇到 “ ？”提示输入 y 可继续操作 ；</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/Users\lenovo\Pictures\下载命令.png"></p>
+<p><img src="/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/blogs\source_posts\ftp服务器搭建\下载命令.png"></p>
 <hr>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#上传命令 put 空格后跟文件名 ；</span><br></pre></td></tr></table></figure>
 
-<p><img src alt="上传"><img src="/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/Users\lenovo\Pictures\上传.png" alt="上传"></p>
+<p><img src alt="上传"><img src="/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/blogs\source_posts\ftp服务器搭建\上传.png" alt="上传"></p>
 <hr>
 <hr>
 <p><strong><em>测试</em></strong></p>
-<p>联系方式：QQ:==<em>2501749431</em>==</p>
+<p>==联系方式：QQ:<em>2501749431</em>==</p>
 <hr>
 <hr>
 
