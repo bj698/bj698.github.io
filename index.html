@@ -155,7 +155,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/06/index/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -169,7 +169,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/" class="post-title-link" itemprop="url">FTP服务搭建</a>
+            <a href="/2020/12/06/index/" class="post-title-link" itemprop="url">FTP服务搭建</a>
         </h2>
 
         <div class="post-meta">
@@ -200,45 +200,73 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><strong><em>以下内容主要为个人使用Markdown进行测试</em></strong></p>
-<p><em>内容仅供参考交流</em></p>
-<h2 id="服务器端"><a href="#服务器端" class="headerlink" title="服务器端"></a>服务器端</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#使用 rpm -q vsftpd 查看是否安装vsftpd软件包(如果未安装则进行安装)</span><br></pre></td></tr></table></figure>
+          
+***以下内容主要为个人使用Markdown进行测试***
 
-<p><img src="/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/blogs\source\ftp服务器搭建\查看安装包.png" alt="查看命令"></p>
-<hr>
+*内容仅供参考交流*
+
+## 服务器端
+
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#使用 rpm -q vsftpd 查看是否安装vsftpd软件包(如果未安装则进行安装)</span><br></pre></td></tr></table></figure>
+
+![查看命令](D:\blogs\source\ftp服务器搭建\查看安装包.png)
+
+***
+
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#使用 service vsftpd start 命令启动vsftpd服务</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/blogs\source\ftp服务器搭建\启动服务.png" alt="启动服务"></p>
-<hr>
+![启动服务](D:\blogs\source\ftp服务器搭建\启动服务.png)
+
+***
+
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#查看vsftpd的主配置文件；cd /etc/vftpd ; </span><br><span class="line">#找到vsftpd.conf ;</span><br><span class="line">#使用vim vsftpd.conf 进行查看；</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/blogs\source\ftp服务器搭建\试试.png" alt="找到配置文件"></p>
-<hr>
+![找到配置文件](D:\blogs\source\ftp服务器搭建\试试.png)
+
+***
+
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#按 i或任意键 进入插入模式 ；</span><br><span class="line">#修改anonymous_enable的参数值  &gt;&gt;&gt;  anonymous_enable=YES ;</span><br><span class="line">#修改local_enable的参数值  &gt;&gt;&gt;   local_enable=YES ;</span><br><span class="line">#修改write_enable的参数值  &gt;&gt;&gt;   write_enable=YES ;</span><br><span class="line"># :wq 保存退出 ;</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/blogs\source\ftp服务器搭建\文件配置.png" alt="配置文件"></p>
-<hr>
-<hr>
-<h2 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#在客户端测试匿名用户FTP的下载和上传操作</span><br></pre></td></tr></table></figure>
+![配置文件](D:\blogs\source\ftp服务器搭建\文件配置.png)
 
-<hr>
+***
+
+---
+
+## 客户端
+
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#在客户端测试匿名用户FTP的下载和上传操作</span><br></pre></td></tr></table></figure>
+
+***
+
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#使用 ftp ip-ddress 命令；ip-address是指器端的ip地址；</span><br><span class="line">#默认用户名：ftp</span><br><span class="line">#默认密码：ftp</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/blogs\source\ftp服务器搭建\下载.png"></p>
-<hr>
+![](D:\blogs\source\ftp服务器搭建\下载.png)
+
+---
+
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#使用 cd pub 切换到pub目录 ；</span><br><span class="line">#使用 ls 查看目录中的文件 ；</span><br><span class="line">#下载命令 mget 空格后跟文件名 ；</span><br><span class="line">#遇到 “ ？”提示输入 y 可继续操作 ；</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/blogs\source\ftp服务器搭建\下载命令.png"></p>
-<hr>
+![](D:\blogs\source\ftp服务器搭建\下载命令.png)
+
+***
+
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#上传命令 put 空格后跟文件名 ；</span><br></pre></td></tr></table></figure>
 
-<p><img src alt="上传"><img src="/2020/12/06/ftp%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/blogs\source\ftp服务器搭建\上传.png" alt="上传"></p>
-<hr>
-<hr>
-<p><strong><em>测试</em></strong></p>
-<p>==联系方式：QQ:<em>2501749431</em>==</p>
-<hr>
-<hr>
+![上传]()![上传](D:\blogs\source\ftp服务器搭建\上传.png)
+
+---
+
+---
+
+***测试***
+
+==联系方式：QQ:*2501749431*==
+
+***
+
+---
+
 
       
     </div>
